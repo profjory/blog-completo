@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joryverso Otaku - Blog</title>
+    <style>
+        header {
+            background-color: #5AFF47;
+            color: #5A0092;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            font-family: sans-serif;
+        }
+
+        main {
+            background-color: #5A0092;
+            color: #5AFF47;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            font-family: sans-serif;
+        }
+
+        article {
+            display: flex;
+            align-items: center; 
+            gap: 20px; 
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #5AFF47; 
+        }
+
+        img {
+            width: 120px;
+            height: auto;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #A8FF9E;
+            margin-top: -5px;
+            font-size: 0.9em;
+        }
+
+        button {
+            background-color: #5AFF47;
+            color: #5A0092;
+            border: none;
+            padding: 6px 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Joryverso Otaku</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+    <main>
+        <article>
+            <img src="Joryverso.png"
+                alt="Logotipo circular estilizado em roxo e verde neon do Joryverso Otaku, mostrando o perfil de um personagem de anime com fones de ouvido olhando para uma tela de computador com linhas de circuitos integrados e programação.">
+            <div>
+                <h2>Bem-Vindos ao Joryverso Otaku! 🌌✨</h2>
+                <p class="artigo-autor">Por: Márjory Dal'Lin</p>
+                <p>Fala, galera! Sejam muito bem-vindos ao meu espaço! Todos me chamam de Jory, e criei o Joryverso — com essa vibe icônica em roxo e verde — para ser o nosso ponto de encontro oficial para falar sobre animes de um jeito leve, sincero e sem enrolação. Por aqui, vou soltar as melhores indicações, comentar os lançamentos da temporada e falar a real sobre o que vale ou não a pena assistir!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="Joryverso.png"
+                alt="Logotipo circular estilizado em roxo e verde neon do Joryverso Otaku, mostrando o perfil de um personagem de anime com fones de ouvido olhando para uma tela de computador com linhas de circuitos integrados e programação.">
+            <div>
+                <h2>Animes e Programação: O que eles têm em comum? 💻🤖</h2>
+                <p class="artigo-autor">Por: Márjory Dal'Lin</p>
+                <p>Vocês já pararam para pensar que criar um código é quase como conjurar um jutsu ou ativar uma habilidade de expansão de domínio? Você precisa de foco, regras estritas (a sintaxe) e muita energia mental! No próximo post, vou listar os melhores personagens programadores dos animes e como a lógica de tecnologia está mais presente nas suas histórias favoritas do que você imagina. Fiquem ligados!</p>
+                <button>❤️ <span>0</span></button>
+                <button>👍 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+</body>
+
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+            if (curtiu === false){
+                texto.textContent++;
+                curtiu = true;
+            } else{
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
+</script>
+
+</html>
